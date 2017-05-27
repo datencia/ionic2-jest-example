@@ -8,6 +8,6 @@ node_js:
   - "6"
 
 before_script:
-  - npm install
+  - yarn install
 
-script: npm run test:ci
+script: yarn test:ci
