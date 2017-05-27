@@ -15,7 +15,7 @@ of then require too much configuration and knowledge about the related tooling (
 
 [Jest](https://facebook.github.io/jest/) is a complete and easy to set-up JavaScript testing solution
 created by Facebook. Some of its benefits are:
- 
+
 - Fast and sandboxed
 - Built-in code coverage reports
 - Zero configuration
@@ -41,8 +41,7 @@ in a terminal / console window. Older versions may produce errors.
 
 ### Steps to run then example
 
-- Install the latest version of the Ionic CLI and Cordova
-
+- Install the latest version of the Ionic CLI and Cordova.
 ```bash
 $ npm install -g cordova ionic
 ```
@@ -50,7 +49,6 @@ $ npm install -g cordova ionic
 > You may need to add “sudo” in front of these commands to install the utilities globally
 
 - Clone this repo into a new project folder.
-
  ```bash
  $ git clone https://github.com/datencia/ionic2-jest-example.git
  $ cd ionic2-jest-example
@@ -62,4 +60,67 @@ $ npm install -g cordova ionic
 
 ### Steps to add Jest to your own Ionic 2 project
 
-[WIP]
+- Install Jest dependencies:
+```bash
+$ npm install jest jest-preset-angular @types/jest --save-dev
+```
+
+- Add this to your npm scripts:
+```json
+"test": "jest",
+"test:watch": "jest --watch",
+"test:ci": "jest --runInBand",
+```
+
+- Include this in your `package.json`:
+```json
+{
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupTestFrameworkScriptFile": "<rootDir>/src/setupJest.ts",
+    "transformIgnorePatterns": [
+      "node_modules/(?!@ngrx|@ionic-native)"
+    ]
+  }
+}
+```
+
+- In the `src` folder create a `setupJest.ts` file with following contents:
+```javascript
+import 'jest-preset-angular';
+import './jestGlobalMocks'; // browser mocks globally available for every test
+```
+
+- Then create the `jestGlobalMocks.ts` file with following contents
+```javascript
+const mock = () => {
+  let storage = {};
+  return {
+    getItem: key => key in storage ? storage[key] : null,
+    setItem: (key, value) => storage[key] = value || '',
+    removeItem: key => delete storage[key],
+    clear: () => storage = {},
+  };
+};
+Object.defineProperty(window, 'localStorage', {value: mock()});
+Object.defineProperty(window, 'sessionStorage', {value: mock()});
+Object.defineProperty(window, 'getComputedStyle', {
+  value: () => ['-webkit-appearance']
+});
+```
+
+- In the `src` folder create a `tsconfig.spec.ts` file with following contents:
+```json
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/spec",
+    "module": "commonjs",
+    "target": "es5",
+    "allowJs": true
+  },
+  "include": [
+    "**/*.spec.ts"
+  ]
+}
+```
