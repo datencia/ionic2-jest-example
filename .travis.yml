@@ -6,8 +6,3 @@ cache: yarn
 
 node_js:
   - "6"
-
-before_script:
-  - yarn install
-
-script: yarn test:ci
