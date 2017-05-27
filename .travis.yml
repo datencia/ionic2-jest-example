@@ -1,0 +1,13 @@
+language: node_js
+
+sudo: false
+
+cache: yarn
+
+node_js:
+  - "6"
+
+before_script:
+  - npm install
+
+script: npm test:ci
