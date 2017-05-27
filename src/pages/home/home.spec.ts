@@ -45,4 +45,10 @@ describe('HomePage', () => {
     expect(h2.textContent).toContain('Welcome to Ionic!');
   });
 
+  it('should show the last updated date', () => {
+    fixture.detectChanges();
+    const p: HTMLParagraphElement[] = fixture.debugElement.queryAll(By.css('p')).map(e => e.nativeElement);
+    expect(p[0].textContent).toContain('Last updated: 05/22/2017');
+  })
+
 });
