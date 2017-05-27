@@ -21,7 +21,7 @@ created by Facebook. Some of its benefits are:
 - Zero configuration
 
 This project tries to illustrate how to add support for unit tests to an Ionic 2 project with a minimal
-configuration. It has been possible thanks to the article [Testing Angular Faster with Jest](https://www.xfive.co/blog/testing-angular-faster-jest/)
+configuration. It's based on the awesome article [Testing Angular faster with Jest](https://www.xfive.co/blog/testing-angular-faster-jest/)
 by [Michal Pierzchala](https://www.xfive.co/blog/author/michal/).
 
 ## Summary
@@ -46,7 +46,9 @@ in a terminal / console window. Older versions may produce errors.
 $ npm install -g cordova ionic
 ```
 
-> You may need to add “sudo” in front of these commands to install the utilities globally
+ > You may need to add “sudo” in front of these commands to install the utilities globally
+
+ > If you run `ionic -v` it should return 3.0.0 (or greater)
 
 - Clone this repo into a new project folder.
  ```bash
@@ -71,6 +73,8 @@ $ npm install jest jest-preset-angular @types/jest --save-dev
 "test:watch": "jest --watch",
 "test:ci": "jest --runInBand",
 ```
+
+ Learn more about [Jest CLI Options](https://facebook.github.io/jest/docs/en/cli.html)
 
 - Include this in your `package.json`:
 ```json
@@ -102,6 +106,7 @@ const mock = () => {
     clear: () => storage = {},
   };
 };
+
 Object.defineProperty(window, 'localStorage', {value: mock()});
 Object.defineProperty(window, 'sessionStorage', {value: mock()});
 Object.defineProperty(window, 'getComputedStyle', {
