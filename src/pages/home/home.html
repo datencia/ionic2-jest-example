@@ -5,16 +5,20 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
+  <h2>Testing Ionic2 with Jest!</h2>
   <p>
+    This is an example of how to test an <a target="_blank" href="https://ionicframework.com/">Ionic 2</a> app
+    using <a target="_blank" href="https://facebook.github.io/jest/">Jest</a>.
+  </p>
+  <ion-item>
     Last updated: {{lastUpdated}}
-  </p>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>User Name:</ion-label>
+    <ion-input type="text" [(ngModel)]="userName" name="userName"></ion-input>
+  </ion-item>
+  <ion-item>
+    <button ion-button (click)="save()">Save</button>
+    <button ion-button color="secondary" (click)="clear()">Clear</button>
+  </ion-item>
 </ion-content>

@@ -91,7 +91,7 @@
     ws "1.1.1"
     xml2js "^0.4.17"
 
-"@ionic/cli-plugin-ionic-angular@^1.2.0":
+"@ionic/cli-plugin-ionic-angular@1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@ionic/cli-plugin-ionic-angular/-/cli-plugin-ionic-angular-1.2.0.tgz#d77bbfdb32639c9d8d1279902aafa08637eb1dc6"
   dependencies:
