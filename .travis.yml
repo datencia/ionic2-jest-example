@@ -6,3 +6,9 @@ cache: yarn
 
 node_js:
   - "6"
+
+script:
+  - yarn test -- --verbose --coverage --coverageReporters=lcov
+
+after_success:
+  - codecov

@@ -39,6 +39,7 @@
     "@ionic/app-scripts": "1.3.7",
     "@ionic/cli-plugin-ionic-angular": "1.2.0",
     "@types/jest": "19.2.3",
+    "codecov": "2.2.0",
     "jest": "20.0.4",
     "jest-preset-angular": "2.0.2",
     "typescript": "2.3.3"
