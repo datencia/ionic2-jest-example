@@ -3,6 +3,8 @@
 [![Build Status](https://travis-ci.org/datencia/ionic2-jest-example.svg?branch=master)](https://travis-ci.org/datencia/ionic2-jest-example)
 [![codecov](https://codecov.io/gh/datencia/ionic2-jest-example/branch/master/graph/badge.svg)](https://codecov.io/gh/datencia/ionic2-jest-example)
 
+![ionic love test](readme_resources/ionic_love_jest.png "ionic love jest")
+
 This is an example of how to test an [Ionic 2](https://ionicframework.com/) app using [Jest](https://facebook.github.io/jest/).
 
 ![yarn test](readme_resources/yarn_test.gif "yarn test")
