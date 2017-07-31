@@ -117,7 +117,7 @@ Object.defineProperty(window, 'getComputedStyle', {
 });
 ```
 
-- In the `src` folder create a `tsconfig.spec.ts` file with following contents:
+- In the `src` folder create a `tsconfig.spec.json` file with following contents:
 ```json
 {
   "extends": "../tsconfig.json",
