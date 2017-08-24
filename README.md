@@ -1,5 +1,6 @@
 # Testing Ionic2 with Jest
 
+[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 [![Build Status](https://travis-ci.org/datencia/ionic2-jest-example.svg?branch=master)](https://travis-ci.org/datencia/ionic2-jest-example)
 [![codecov](https://codecov.io/gh/datencia/ionic2-jest-example/branch/master/graph/badge.svg)](https://codecov.io/gh/datencia/ionic2-jest-example)
 
