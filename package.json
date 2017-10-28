@@ -53,6 +53,7 @@
     "setupTestFrameworkScriptFile": "<rootDir>/src/setupJest.ts",
     "transformIgnorePatterns": [
       "node_modules/(?!@ngrx|@ionic-native|@ionic)"
-    ]
+    ],
+    "testRegex": "src.*?\\.(test|spec)\\.(ts|js)$"
   }
 }
