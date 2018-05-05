@@ -88,7 +88,6 @@ $ npm install jest jest-preset-angular @types/jest --save-dev
     "roots": [
       "src"
     ],
-    "testRegex": "\\.spec\\.ts$",
     "setupTestFrameworkScriptFile": "<rootDir>/src/setupJest.ts",
     "transformIgnorePatterns": [
       "node_modules/(?!@ngrx|@ionic-native|@ionic)"
