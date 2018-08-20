@@ -133,6 +133,9 @@ Object.defineProperty(window, 'getComputedStyle', {
   },
   "include": [
     "**/*.spec.ts"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
 ```
