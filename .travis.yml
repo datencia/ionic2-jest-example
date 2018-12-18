@@ -6,6 +6,8 @@ cache: yarn
 
 node_js:
   - "6"
+  - "8"
+  - "10"
 
 script:
   - yarn test -- --verbose --coverage --coverageReporters=lcov
