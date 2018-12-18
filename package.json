@@ -37,7 +37,7 @@
     "zone.js": "0.8.26"
   },
   "devDependencies": {
-    "@ionic/app-scripts": "3.1.9",
+    "@ionic/app-scripts": "3.2.1",
     "@types/jest": "22.2.3",
     "codecov": "2.2.0",
     "jest": "22.4.3",
